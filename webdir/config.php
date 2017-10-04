@@ -153,7 +153,7 @@ LEFT JOIN person p ON id_p = p.K0i1 where id = '$id' AND  id_p IS NOT NULL";
 $result2= mysql_query($query);
 
 if (mysql_numrows($result2)){
-if ($sart == "b") $name = "K�nstler";
+if ($sart == "b") $name = "Künstler";
 else $name = "Verfasser";
 
 print"<tr><td valign='top'><strong>".htmlspecialchars($name)."</strong></td><td>";

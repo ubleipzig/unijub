@@ -64,8 +64,8 @@ for ($i=0;$i<3;$i++)
 
 
 <?php	 } ?>
-	
-	
+
+
 
 
 	<tr>
@@ -91,7 +91,7 @@ for ($i=0;$i<3;$i++)
 
 
 
-<tr><td colspan = 4><input type = "submit" value="Suchen" > 
+<tr><td colspan = 4><input type = "submit" value="Suchen" >
 <input type="reset" value=" Abbrechen">
 
 Ordnen nach:<select class="form" name="sort">
@@ -102,7 +102,7 @@ Ordnen nach:<select class="form" name="sort">
 
 <tr><td colspan = 4>
 <input type="checkbox" name="filter0" value="1" <?php if($filter[0]==1)print"CHECKED "; ?> onclick ="return check_filter(0)">Monographie
-<input type="checkbox" name="filter1" value="1" <?php if($filter[1]==1)print"CHECKED "; ?> onclick ="return check_filter(1)">Aufsätze
+<input type="checkbox" name="filter1" value="1" <?php if($filter[1]==1)print"CHECKED "; ?> onclick ="return check_filter(1)">AufsÃ¤tze
 <input type="checkbox" name="filter2" value="1" <?php if($filter[2]==1)print"CHECKED "; ?> onclick ="return check_filter(2)">Periodica
 <input type="checkbox" name="filter4" value="1" <?php if($filter[4]==1)print"CHECKED "; ?> onclick ="return check_filter(4)">bildliche Darstellungen
 
@@ -139,7 +139,7 @@ var chk = 0,chkZ=1;
 
   if (chk == 0)
    {
-    alert("Es muss mindestens eine Feld ausgefüllt sein!");
+    alert("Es muss mindestens eine Feld ausgefÃ¼llt sein!");
     document.Formular.suchwort0.focus();
     return false;
    }
@@ -147,7 +147,7 @@ var chk = 0,chkZ=1;
 
  if(chkZ == 0)
     {
-    alert("Jahreszahl keine gültige Zahl!");
+    alert("Jahreszahl keine gÃ¼ltige Zahl!");
     document.Formular.suchwort3.focus();
     return false;
     }

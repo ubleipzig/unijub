@@ -235,7 +235,7 @@ break;
 
 
 
-case 5://k�rperschaft
+case 5://körperschaft
 $query_con[0][$i] = "I.K800  $var OR  I.K810  $var OR I.K811  $var OR I.K812  $var OR M.K240  $var";
 $query_con[1][$i] = "I.K800  $var OR  I.K810  $var OR I.K811  $var OR I.K812  $var OR U.K240  $var";
 $query_con[2][$i]="  F.K240 $var OR I.K800 $var OR I.K810 $var OR I.K811 $var OR I.K812 $var  OR F.K630 $var OR I2.K800 $var OR I2.K810 $var OR I2.K811 $var";
@@ -657,7 +657,7 @@ if(!empty($row[6])){if(!empty($row[5]))print ",&nbsp;"; else if(!empty($row[4]))
 
 
 
-else if($row_temp[1] == "u")/////////////unselbstst�ndig/////////////////////
+else if($row_temp[1] == "u")/////////////unselbstständig/////////////////////
 {
 
 $row="U.K0i1,U.K003,U.K320,U.K335,IFNULL(IFNULL(F.K640,F.K620),dz.id_z) as ztitel,dz.K521b as dzjahr,dz.K521d as seite,dz.K521a as band,dz.K521c as heftnr,IFNULL(P.K900,H_k200.id_p) as person,U.K410 as eort,U.K412 as verlag, U.K425 as ejahr,dz.zeort as zeort,F.K632 as verlag_z";
@@ -823,8 +823,8 @@ print"</table></tr></td><tr><td><table width = \"100%\">"
 
 
 
-if($offset != 0)print"<a href='ausgabe.php?page=".($page-1)."&smod=$smod&$url_2'>[zur�ck]</a>";
-if($offset+10 < $count[0])print"<a href='ausgabe.php?page=".($page+1)."&smod=$smod&$url_2'>[vorw�rts]</a>";
+if($offset != 0)print"<a href='ausgabe.php?page=".($page-1)."&smod=$smod&$url_2'>[zurück]</a>";
+if($offset+10 < $count[0])print"<a href='ausgabe.php?page=".($page+1)."&smod=$smod&$url_2'>[vorwärts]</a>";
 print"</TD></TR></table></td></tr></table>";
 
 mysql_close($db);
@@ -846,7 +846,7 @@ for (var i = 0; i < document.Formular2.page.value.length; i++)
 if (document.Formular2.page.value.charAt(i) < "0" ||
         document.Formular2.page.value.charAt(i) > "9" ||  document.Formular2.page.value > <?php  print ceil($count[0]/10); ?> )
     {
-     alert("Dies ist kein g�ltiger Wert");
+     alert("Dies ist kein gültiger Wert");
     document.Formular2.page.focus();
     return false;
     }
