@@ -1,0 +1,9 @@
+Options +Indexes
+
+DirectoryIndex index.html index.php
+
+authType      basic
+authName      "unijub - intern!"
+order         deny,allow
+require       valid-user
+AuthUserFile  /conf/.htpasswd

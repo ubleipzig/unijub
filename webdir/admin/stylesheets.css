@@ -1,0 +1,43 @@
+
+a:link { color:blue; text-decoration:none; }
+a:visited {  color:blue; text-decoration:none; }
+a:focus {  color:red; text-decoration:underline; }
+a:hover {  color:green; text-decoration:none; }
+a:active {  color:lime; text-decoration:underline; }
+
+
+.box0 { background-color:#C0C0C0; padding:6px; margin:0px; }
+
+.box1 { background-color:#FBFCFD; padding:6px; margin:0px; }
+
+
+
+BODY {
+    font-family:verdana,sans-serif,arial;
+}
+UL.link {
+	list-style-image: url("http://sunny.biblio.etc.tu-bs.de/hermes/search/bullet_small.gif");
+	margin-left: 16px;
+}
+INPUT.button {
+    background-color:#cccccc;
+    border-color:#cccccc;
+    border:2;
+    color:#000000;
+    font-family:System,Verdana,Arial;
+    font-size:10pt;
+    font-weight:bold;
+    text-shadow:black;
+}
+INPUT.term {
+    background-color:#ffffff;
+    color:#0000ff;
+}
+.header {
+    font-family:Verdana,Arial;
+    font-size:10pt;
+}
+.rec {
+    font-family:Verdana,Arial;
+    font-size:10pt;
+}

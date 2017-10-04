@@ -1,0 +1,30 @@
+version: '2'
+services:
+  php:
+    build: .
+    volumes:
+    - conf:/conf
+    - db-backup:/db-backup
+    environment:
+    - MYSQL_HOST=db
+    - MYSQL_DATABASE=unijub
+    - MYSQL_USER=unijub
+    - MYSQL_PASSWORD=changeme
+    ports:
+    - 80:80
+  db:
+    image: mariadb:latest
+    volumes:
+    - db-data:/var/lib/mysql
+    - db-backup:/db-backup
+    volumes_from:
+    - php
+    environment:
+    - MYSQL_RANDOM_ROOT_PASSWORD=true
+    - MYSQL_DATABASE=unijub
+    - MYSQL_USER=unijub
+    - MYSQL_PASSWORD=changeme
+volumes:
+  conf: {}
+  db-data: {}
+  db-backup: {}
