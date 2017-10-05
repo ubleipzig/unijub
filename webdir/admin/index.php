@@ -1,48 +1,48 @@
 <html>
 <head>
-   
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
    <title>Index</title>
 <link rel="stylesheet" href="stylesheet.css" type="text/css">
- 
+
       </head>
 <script language="JavaScript">
   <!--
-   
- 
-   
-   
+
+
+
+
    function getNotion(notion,indexnr,mod)
-   {    
-  
-   
+   {
+
+
    var text =opener.document.forms["Formular"].elements[indexnr].value;
 
- 
+
    if(mod == 1)
    {
-   text=text+";"; 
-   notion=text + notion; 
-   } 
+   text=text+";";
+   notion=text + notion;
+   }
      opener.document.forms["Formular"].elements[indexnr].value=notion;
      opener.document.forms["Formular"].elements[indexnr].focus();
-  
-    
-     
-    
+
+
+
+
     self.close();
    };
-   
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
   //-->
- 
- 
+
+
  </script>
 
 <?php
@@ -111,8 +111,8 @@ print"</FORM>";
 
 
 print"<tr><td>";
-if($offset !=0)print"<a href='index.php?page=".($page-1)."&id=$id&mod=$mod&sart=$sart'>[zurück]</a>";
-if($offset+50 < $count[0])print"<a href='index.php?page=".($page+1)."&id=$id&mod=$mod&sart=$sart'>[vorwärts]</a>";
+if($offset !=0)print"<a href='index.php?page=".($page-1)."&id=$id&mod=$mod&sart=$sart'>[zurÃ¼ck]</a>";
+if($offset+50 < $count[0])print"<a href='index.php?page=".($page+1)."&id=$id&mod=$mod&sart=$sart'>[vorwÃ¤rts]</a>";
 print"</tr></td>";
 
 

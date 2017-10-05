@@ -1,8 +1,9 @@
 <HTML>
 <HEAD>
 <TITLE>Leipzig - Bibliographie</TITLE>
-</HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="stylesheets.css">
+</HEAD>
 <body>
 
 
@@ -65,7 +66,7 @@ person ($id,$url,$sart)  ;
 //sonstige
 sonstige ($id,$url)  ;
 
-//körperschaft
+//kÃ¶rperschaft
 
 koerperschaft ($row[Koerperschaft],$row[kid],$url)  ;
 
@@ -95,7 +96,7 @@ if(!empty($row[promotion])){if(!empty($row[hart]))print ",&nbsp;"; else if((!emp
 
 print"</td></tr>";
 }
-//schlagwörter
+//schlagwÃ¶rter
 schlagwort ($id,$url) ;
 
 
@@ -114,7 +115,7 @@ else if ($sart == "u")
 $table="unselbststaendig u";
 
 $query="SELECT u.K320 ,u.K335 ,u.K410 as eort,u.K412 as verlag,
-u.K425 as ejahr,u.K448 as kongress,u.K433 as umfang,u.K799 
+u.K425 as ejahr,u.K448 as kongress,u.K433 as umfang,u.K799
 FROM $table
 
 where u.K0i1 = '$id' ";
@@ -152,14 +153,14 @@ sonstige ($id,$url)  ;
 
 $query="SELECT IFNULL(IFNULL(f.K640,f.K620),dz.id_z) as zeitschrift,
 dz.K521b as dzjahr,dz.K521d as seite,dz.K521a as band,
-dz.K521c as heftnr,f.K0i1 as zid,dz.zeort as zeort,f.K632 as verlag From k441_z dz 
+dz.K521c as heftnr,f.K0i1 as zid,dz.zeort as zeort,f.K632 as verlag From k441_z dz
 LEFT JOIN  periodica f On dz.id_z = f.K0i1 where dz.id = '$id' Group by zeitschrift ";
 
 $result= mysql_query($query);
 
 
 
-while($row2=mysql_fetch_array($result)) 
+while($row2=mysql_fetch_array($result))
 {
 if(!empty($row2[zeitschrift]))
 {
@@ -191,7 +192,7 @@ ovj ($row[eort],$row[verlag],$row[ejahr],"",$url);
 umfang ($row[umfang]);
 
 
-//schlagwörter
+//schlagwÃ¶rter
 schlagwort ($id,$url) ;
 
 print"</table>";
@@ -219,7 +220,7 @@ titel ($row[htitel],$row[ztitel],$url,$sart);
 titel_zusatz ("",$row[K799])   ;
 
 
-//körperschaft
+//kÃ¶rperschaft
 koerperschaft ($row[koerperschaft],$row[kid],$url)  ;
 
 
@@ -314,7 +315,7 @@ person ($id,$url,$sart)  ;
 //sonstige
 sonstige ($id,$url)  ;
 
-//körperschaft
+//kÃ¶rperschaft
 
 koerperschaft ($row[Koerperschaft],$row[kid],$url)  ;
 
@@ -335,7 +336,7 @@ if(!empty($row[beschreibung])) print"<tr><td><strong>Beschreibung:</strong></td>
 
 
 
-//schlagwörter
+//schlagwÃ¶rter
 schlagwort ($id,$url) ;
 
 print"</table>";
@@ -343,7 +344,7 @@ print"</table>";
 mysql_close($db);
 ?>
 
-<p align = "center"><a  href ="javascript:_close ()">[Fenster schließen]</a></p> 
+<p align = "center"><a  href ="javascript:_close ()">[Fenster schlieÃŸen]</a></p>
 
 </body>
 </html>

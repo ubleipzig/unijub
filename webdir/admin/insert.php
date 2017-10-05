@@ -1,8 +1,9 @@
 <HTML>
 <HEAD>
-<TITLE>Leipzig - Bibliographie</TITLE> 
-</HEAD>
+<TITLE>Leipzig - Bibliographie</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="stylesheets.css">
+</HEAD>
 <body>
 <table border = 1>
 

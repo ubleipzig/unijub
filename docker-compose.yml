@@ -3,6 +3,7 @@ services:
   php:
     build: .
     volumes:
+    - ./webdir:/var/www/html
     - conf:/conf
     - db-backup:/db-backup
     environment:

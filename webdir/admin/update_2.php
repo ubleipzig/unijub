@@ -1,8 +1,9 @@
 <HTML>
 <HEAD>
-<TITLE>Leipzig - Bibliographie</TITLE> 
+<TITLE>Leipzig - Bibliographie</TITLE>
 </HEAD>
 <link rel="stylesheet" type="text/css" href="stylesheets.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <body>
 <table border = 1>
 
@@ -39,10 +40,10 @@ $i++;
 $$var=_array_item ($_GET,"$var");
 $str =_array_item ($_GET,"$var");
 $str=str_replace ("&quot;","\"",$str);
-$str_rows=$str_rows."$var = '$str',";  
+$str_rows=$str_rows."$var = '$str',";
 unset ($str);
 
-	
+
 if ($var == "K087")       {$column ="$K087"; $var2="k087_p";}
 else if ($var == "K200")  {$column ="$K200"; $var2="k200_p";}
 else if   ($var == "K204"){$column ="$K204";  $var2="k204_p";}

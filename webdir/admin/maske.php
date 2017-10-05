@@ -15,14 +15,14 @@
 
 <tr>    <td class="form" >
     	     <select class="form" name="suchindex0">
-           <option value="1" <?php if($suchindex[0]==1)print"selected"; ?>>All  </option>
-           <option value="2" <?php if($suchindex[0]==2)print"selected"; ?>>Titel  </option>
-           <option value="3" <?php if($suchindex[0]==3)print"selected"; ?>>Schlagw&ouml;rter </option>
-           <option value="4" <?php if($suchindex[0]==4)print"selected"; ?>>Person, Autor </option>
-           <option value="5" <?php if($suchindex[0]==5)print"selected"; ?>>K&ouml;rperschaft  </option>
+           <option value="1" <?php if($suchindex[0]==1)print"selected"; ?>>All</option>
+           <option value="2" <?php if($suchindex[0]==2)print"selected"; ?>>Titel</option>
+           <option value="3" <?php if($suchindex[0]==3)print"selected"; ?>>Schlagw√∂rter</option>
+           <option value="4" <?php if($suchindex[0]==4)print"selected"; ?>>Person, Autor</option>
+           <option value="5" <?php if($suchindex[0]==5)print"selected"; ?>>K√∂rperschaft</option>
            <option value="6" <?php if($suchindex[0]==6)print"selected"; ?>>Ort</option>
-           <option value="7" <?php if($suchindex[0]==7)print"selected"; ?>>Verlag </option>
-          
+           <option value="7" <?php if($suchindex[0]==7)print"selected"; ?>>Verlag</option>
+
           </select>
 
 
@@ -42,14 +42,14 @@
 <tr>
 <td>
 <input type="checkbox" name="filter0" value="1" <?php if($filter[0]==1)print"CHECKED "; ?> onclick ="return check_filter(0)">Monographie
-<input type="checkbox" name="filter1" value="1" <?php if($filter[1]==1)print"CHECKED "; ?> onclick ="return check_filter(1)">Aufs‰tze
+<input type="checkbox" name="filter1" value="1" <?php if($filter[1]==1)print"CHECKED "; ?> onclick ="return check_filter(1)">Aufs√§tze
 <input type="checkbox" name="filter2" value="1" <?php if($filter[2]==1)print"CHECKED "; ?> onclick ="return check_filter(2)">Periodica
 <input type="checkbox" name="filter4" value="1" <?php if($filter[4]==1)print"CHECKED "; ?> onclick ="return check_filter(4)">bildliche Darstellungen
 
 
 
-<a  href="javascript:setFilter(1)" style="font-size:0.8em"  >[Alle Ausw‰hlen]</a>	
-	
+<a  href="javascript:setFilter(1)" style="font-size:0.8em"  >[Alle Ausw√§hlen]</a>
+
 </td>
 
 </tr>
@@ -76,12 +76,12 @@ var chk = 0,chkZ=1;
   if (document.Formular.suchwort0.value != "") chk =1 ;
 
 
-  
+
 
 
   if (chk == 0)
    {
-    alert("Es muss mindestens eine Feld ausgef¸llt sein!");
+    alert("Es muss mindestens eine Feld ausgef√ºllt sein!");
     document.Formular.suchwort0.focus();
     return false;
    }

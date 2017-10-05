@@ -1,11 +1,10 @@
 <HTML>
 <HEAD>
 <TITLE>Leipzig - Bibliographie</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </HEAD>
 <link rel="stylesheet" type="text/css" href="stylesheets.css">
 <body>
-
-
 
 
 <?php
@@ -559,11 +558,11 @@ foreach ($suchindex as $row)
 
 switch ($row)
 {
-case 1:$var="(Alle W&ouml;rter)";          break;
+case 1:$var="(Alle Wörter)";          break;
 case 2:$var="(Titel)";          break;
-case 3:$var="(Schlagw&ouml;rter)";   break;
+case 3:$var="(Schlagwörter)";   break;
 case 4:$var="(Person, Autor)";  break;
-case 5:$var="(K&ouml;rperschaft )";  break;
+case 5:$var="(Körperschaft )";  break;
 case 6:$var="(Ort)";            break;
 case 7:$var="(Verlag)";         break;
 case 8:$var="(Systematik)";     break;
@@ -573,7 +572,7 @@ if($i == 0)print"<table><tr><td><strong>Ihre Aktion:&nbsp;</strong></td><td>";
 else print"<tr><td &nbsp;</td><td>";
 if($i == 0)print"suchen&nbsp;";
 else if($connector[$i-1]== 1)print"erweitern&nbsp;";
-else print"einschr&auml;nken&nbsp;";
+else print"einschränken&nbsp;";
 
 print"$var&nbsp;".htmlspecialchars(stripslashes($suchwort[$i]))."</td></tr>";
 $i++;

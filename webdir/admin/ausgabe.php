@@ -1,12 +1,10 @@
 <HTML>
 <HEAD>
-<TITLE>Leipzig - Bibliographie</TITLE> 
-</HEAD>
+<TITLE>Leipzig - Bibliographie</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="stylesheets.css">
+</HEAD>
 <body>
-
-
-
 
 <?php
 include "config.php";
@@ -70,12 +68,12 @@ suchindex0=".urlencode($suchindex[0])."
 
 print"<table width = 100% ><tr><td>";
 
-if ($smod == 0) 
+if ($smod == 0)
 {
 include "maske.php";
 print"</td><td align = middle ><a href=\"ausgabe.php?smod=1&$url_2\">Erweiterte Suche</a></td>";
 }
-else 
+else
 {
 include "maske2.php";
 print"</td><td align = middle><a href=\"ausgabe.php?smod=0&$url_2\">Einfache Suche</a></td>";
@@ -125,16 +123,16 @@ OR M.K422   $var OR M.K425   $var OR M.K426   $var OR M.K440    $var OR M.K448  
 
 OR M.K510    $var OR M.K511   $var OR M.K513    $var OR M.K519   $var OR M.K760    $var
 
-OR M.K761    $var OR M.K777    $var OR M.K799   $var 
+OR M.K761    $var OR M.K777    $var OR M.K799   $var
 
-OR P.K900 $var OR P.K910 $var OR P.K911 $var OR P2.K900 $var OR P2.K910 $var OR P2.K911 $var 
+OR P.K900 $var OR P.K910 $var OR P.K911 $var OR P2.K900 $var OR P2.K910 $var OR P2.K911 $var
 
-OR I.K800  $var OR  I.K810  $var OR I.K811  $var OR I.K812 
+OR I.K800  $var OR  I.K810  $var OR I.K811  $var OR I.K812
 
 OR P3.K900 $var OR P3.K910 $var OR P3.K911 $var ";
 
 $query_join[0][3] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = M .K0i1
-                    LEFT JOIN  person P ON H_k200.id_p = P.K0i1 
+                    LEFT JOIN  person P ON H_k200.id_p = P.K0i1
                     LEFT JOIN  k204_p H_k204  ON H_k204.id = M .K0i1
                     LEFT JOIN  person P2 ON H_k204.id_p = P2.K0i1
                     LEFT JOIN  institution I ON M.k240 = I.K0i1
@@ -142,16 +140,16 @@ $query_join[0][3] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = M .K0i1
                     LEFT JOIN  person P3 ON H_k087.id_p = P3.K0i1";
 
 
-$query_con[1][$i] ="U.K060 $var OR U.K086 $var OR U.K087 $var OR U.K200 $var OR U.K204 $var OR U.K240 $var OR U.K320 $var OR U.K335 $var OR U.K403 $var OR U.K433 $var OR U.K410 $var OR U.K412 $var OR U.K425 $var OR U.K440 $var OR   U.K448 $var  OR U.K761 $var OR U.K777 $var OR U.K799 $var 
-                    OR P.K900 $var OR P.K910 $var OR P.K911 $var OR P2.K900 $var OR P2.K910 $var OR P2.K911 $var 
-                    OR I.K800  $var OR  I.K810  $var OR I.K811  $var OR I.K812 
-                   OR P3.K900 $var OR P3.K910 $var OR P3.K911 $var OR F.K632 $var 
+$query_con[1][$i] ="U.K060 $var OR U.K086 $var OR U.K087 $var OR U.K200 $var OR U.K204 $var OR U.K240 $var OR U.K320 $var OR U.K335 $var OR U.K403 $var OR U.K433 $var OR U.K410 $var OR U.K412 $var OR U.K425 $var OR U.K440 $var OR   U.K448 $var  OR U.K761 $var OR U.K777 $var OR U.K799 $var
+                    OR P.K900 $var OR P.K910 $var OR P.K911 $var OR P2.K900 $var OR P2.K910 $var OR P2.K911 $var
+                    OR I.K800  $var OR  I.K810  $var OR I.K811  $var OR I.K812
+                   OR P3.K900 $var OR P3.K910 $var OR P3.K911 $var OR F.K632 $var
                     OR F.K060 $var OR F.K086 $var OR F.K204 $var OR F.K240 $var OR F.K310 $var OR F.K320 $var OR F.K330 $var OR F.K335 $var OR F.K340 $var OR F.K350 $var OR F.K410 $var OR F.K412 $var OR F.K426 $var OR F.K427 $var OR F.K610 $var OR F.K620 $var OR F.K630 $var OR F.K631 $var OR F.K632 $var OR F.K635 $var OR F.K636 $var OR F.K637 $var OR F.K640 $var OR F.K760 $var OR F.K761 $var OR F.K778 $var OR F.K799 $var OR F.K910 $var
                     OR dz.K521a $var OR dz.K521b $var OR dz.K521c $var OR dz.K521d $var OR dz.zeort $var
 ";
 
 $query_join[1][5] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = U.K0i1
-                    LEFT JOIN  person P ON H_k200.id_p = P.K0i1 
+                    LEFT JOIN  person P ON H_k200.id_p = P.K0i1
                     LEFT JOIN  k204_p H_k204  ON H_k204.id = U.K0i1
                     LEFT JOIN  person P2 ON H_k204.id_p = P2.K0i1
                     LEFT JOIN  institution I ON U.k240 = I .K0i1
@@ -159,8 +157,8 @@ $query_join[1][5] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = U.K0i1
                     LEFT JOIN  person P3 ON H_k087.id_p = P3.K0i1
                     LEFT JOIN  k441_z dz ON dz.id  = U.K0i1
                     LEFT JOIN  periodica F ON dz.id_z = F.K0i1
-                    
-                    
+
+
                     ";
 
 
@@ -171,7 +169,7 @@ $query_join[1][5] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = U.K0i1
 
 $query_con[2][$i] ="F.K060 $var OR F.K086 $var OR F.K204 $var OR F.K240 $var OR F.K310 $var OR F.K320 $var OR F.K330 $var OR F.K335 $var OR F.K340 $var OR F.K350 $var OR F.K410 $var OR F.K412 $var OR F.K426 $var OR F.K427 $var OR F.K610 $var OR F.K620 $var OR F.K630 $var OR F.K631 $var OR F.K632 $var OR F.K635 $var OR F.K636 $var OR F.K637 $var OR F.K640 $var OR F.K760 $var OR F.K761 $var OR F.K778 $var OR F.K799 $var OR F.K910 $var
                     OR I.K800 $var OR I.K810 $var OR I.K811 $var OR I.K812 $var  OR I2.K800 $var OR I2.K810 $var OR I2.K811 $var OR I2.K812 $var
-                     
+
 ";
 
 
@@ -182,7 +180,7 @@ $query_join[2][2] ="LEFT JOIN  institution I ON F.K240= I .K0i1
 
 
 
-                    
+
 
 
 
@@ -203,12 +201,12 @@ $query_con[2][$i]="F.K240 $var OR I.K800 $var OR I.K810 $var OR I.K811 $var OR I
 
 
 $query_join[0][0] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = M .K0i1
-                    LEFT JOIN  person P ON H_k200.id_p = P.K0i1 
+                    LEFT JOIN  person P ON H_k200.id_p = P.K0i1
                     LEFT JOIN  k204_p H_k204  ON H_k204.id = M .K0i1
                     LEFT JOIN  person P2 ON H_k204.id_p = P2.K0i1";
 
 $query_join[1][0] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = U .K0i1
-                    LEFT JOIN  person P ON H_k200.id_p = P.K0i1 
+                    LEFT JOIN  person P ON H_k200.id_p = P.K0i1
                     LEFT JOIN  k204_p H_k204  ON H_k204.id = U .K0i1
                     LEFT JOIN  person P2 ON H_k204.id_p = P2.K0i1";
 
@@ -235,7 +233,7 @@ break;
 
 
 
-case 5://kˆrperschaft
+case 5://k√∂rperschaft
 $query_con[0][$i] = "I.K800  $var OR  I.K810  $var OR I.K811  $var OR I.K812  $var OR M.K240  $var";
 $query_con[1][$i] = "I.K800  $var OR  I.K810  $var OR I.K811  $var OR I.K812  $var OR U.K240  $var";
 $query_con[2][$i]="  F.K240 $var OR I.K800 $var OR I.K810 $var OR I.K811 $var OR I.K812 $var  OR F.K630 $var OR I2.K800 $var OR I2.K810 $var OR I2.K811 $var";
@@ -260,7 +258,7 @@ $query_con[2][$i] = "F.K631 $var OR F.K410 $var";
 break;
 
 
-case 7://verlag/zeitschirft 
+case 7://verlag/zeitschirft
 $query_con[0][$i] = "M.K412 $var ";
 $query_con[1][$i] = "U.K412 $var OR F.K632 $var  ";
 $query_con[2][$i] = "F.K412 $var OR F.K632 $var ";
@@ -305,7 +303,7 @@ $var=$suchwort[$i2];
 $query_con[0][3] = "M.K425 $operator2 $var ";
 $query_con[1][3] = "dz.K521b $operator2 $var OR U.K425 $operator2 $var  ";
 $query_con[2][3] = "F.K636 $operator2 $var ";
-$query_join[1][3]=" LEFT JOIN  k441_z dz ON dz.id  = U.K0i1"; 
+$query_join[1][3]=" LEFT JOIN  k441_z dz ON dz.id  = U.K0i1";
 break;
 
 
@@ -392,7 +390,7 @@ $query_temp="Create Temporary TABLE Temp (
 	id  char (30) NOT NULL ,
 	sart char (1) NOT NULL
 	$query_temp_z,
-	
+
 	 PRIMARY KEY  (id)
 	) Engine = MYISAM;";
 $result= mysql_query($query_temp);
@@ -509,7 +507,7 @@ $query_4="SELECT $row[0] FROM $table[0]
 
 where $query[0] AND M.K003 = 'b'  GROUP BY K0i1";
 
-$result= mysql_query("INSERT INTO Temp $query_4");	
+$result= mysql_query("INSERT INTO Temp $query_4");
 }
 
 
@@ -518,7 +516,7 @@ $result= mysql_query("INSERT INTO Temp $query_4");
 
 if(empty($page)){$offset=0;  $page=1;}
 else $offset =($page-1) *10;
-  
+
 if ($sort == 0)$order="sart";
 else if ($sort == 1)$order="titel";
 
@@ -541,7 +539,7 @@ else  $upto = $offset+10;
 
 if(empty($suchwort[0]))die ("<p>Bitte geben sie einen Suchbegriff ein</p>");
 
-else 
+else
 {
 print"<TABLE width =\"100%\" cellpadding=\"0\" cellspacing=\"10\" border=\"0\"><tr><td><table width = \"100%\" border = \"0\"><tr><td>Es sind <strong>$count[0]</strong> Treffer <br> Dies sind die Treffer <strong>".(1+$offset)."</strong> - <strong>".($upto)."</strong><br>
 Seite <strong>$page</strong> von <strong>".ceil($count[0]/10)."</strong></td></tr></table></td></tr><tr><td>" ;
@@ -559,11 +557,11 @@ foreach ($suchindex as $row)
 
 switch ($row)
 {
-case 1:$var="(Alle W&ouml;rter)";          break;
+case 1:$var="(Alle W√∂rter)";    break;
 case 2:$var="(Titel)";          break;
-case 3:$var="(Schlagw&ouml;rter)";   break;
+case 3:$var="(Schlagw√∂rter)";   break;
 case 4:$var="(Person, Autor)";  break;
-case 5:$var="(K&ouml;rperschaft )";  break;
+case 5:$var="(K√∂rperschaft )";  break;
 case 6:$var="(Ort)";            break;
 case 7:$var="(Verlag)";         break;
 case 8:$var="(Systematik)";     break;
@@ -573,7 +571,7 @@ if($i == 0)print"<table><tr><td><strong>Ihre Aktion:&nbsp;</strong></td><td>";
 else print"<tr><td &nbsp;</td><td>";
 if($i == 0)print"suchen&nbsp;";
 else if($connector[$i-1]== 1)print"erweitern&nbsp;";
-else print"einschr&auml;nken&nbsp;";
+else print"einschr√§nken&nbsp;";
 
 print"$var&nbsp;".htmlspecialchars(stripslashes($suchwort[$i]))."</td></tr>";
 $i++;
@@ -597,18 +595,18 @@ $query_join[0][0] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = M .K0i1
 
 $query_join[1][0] ="LEFT JOIN  k200_p H_k200  ON H_k200.id = U .K0i1
                     LEFT JOIN  person P ON H_k200.id_p = P .K0i1
-                   
+
                     LEFT JOIN  k441_z dz ON dz.id = U .K0i1
                     LEFT JOIN  periodica F On dz.id_z = F .K0i1";
-                    
-                 
-                  
+
+
+
 
 $query_join[2][0] ="LEFT JOIN  institution I ON F.K240= I.K0i1
                     LEFT JOIN  institution I2 ON F.K630= I2.K0i1" ;
 
- 
-                    
+
+
 
 
 $i=$offset;
@@ -657,7 +655,7 @@ if(!empty($row[6])){if(!empty($row[5]))print ",&nbsp;"; else if(!empty($row[4]))
 
 
 
-else if($row_temp[1] == "u")/////////////unselbstst‰ndig/////////////////////
+else if($row_temp[1] == "u")/////////////unselbstst√§ndig/////////////////////
 {
 
 $row="U.K0i1,U.K003,U.K320,U.K335,IFNULL(IFNULL(F.K640,F.K620),dz.id_z) as ztitel,dz.K521b as dzjahr,dz.K521d as seite,dz.K521a as band,dz.K521c as heftnr,IFNULL(P.K900,H_k200.id_p) as person,U.K410 as eort,U.K412 as verlag, U.K425 as ejahr,dz.zeort as zeort,F.K632 as verlag_z";
@@ -692,7 +690,7 @@ if(!empty($row[seite])){ print ",&nbsp;".htmlspecialchars($row[seite]); }
 
 
 }
-else 
+else
 {
 
 if(!empty($row[eort])){if(!empty($row[person]))print "&nbsp;-&nbsp;"; print htmlspecialchars($row[eort]);}
@@ -824,8 +822,8 @@ print"</table></tr></td><tr><td><table width = \"100%\">"
 
 
 
-if($offset != 0)print"<a href='ausgabe.php?page=".($page-1)."&smod=$smod&$url_2'>[zur¸ck]</a>";
-if($offset+10 < $count[0])print"<a href='ausgabe.php?page=".($page+1)."&smod=$smod&$url_2'>[vorw‰rts]</a>";
+if($offset != 0)print"<a href='ausgabe.php?page=".($page-1)."&smod=$smod&$url_2'>[zur√ºck]</a>";
+if($offset+10 < $count[0])print"<a href='ausgabe.php?page=".($page+1)."&smod=$smod&$url_2'>[vorw√§rts]</a>";
 print"</TD></TR></table></td></tr></table>";
 
 mysql_close($db);
@@ -847,7 +845,7 @@ for (var i = 0; i < document.Formular2.page.value.length; i++)
 if (document.Formular2.page.value.charAt(i) < "0" ||
         document.Formular2.page.value.charAt(i) > "9" ||  document.Formular2.page.value > <?php  print ceil($count[0]/10); ?> )
     {
-     alert("Dies ist kein g¸ltiger Wert");
+     alert("Dies ist kein g√ºltiger Wert");
     document.Formular2.page.focus();
     return false;
     }

@@ -1,12 +1,13 @@
 <HTML>
 <HEAD>
 <link rel="stylesheet" type="text/css" href="stylesheets.css">
-<TITLE>Leipzig - Bibliographie</TITLE> 
+<TITLE>Leipzig - Bibliographie</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </HEAD>
 
 <body>
 
-<?php 
+<?php
 include "config.php";
 include "array_inc.php";
 $sart=_array_item ($_GET,"sart");
@@ -15,19 +16,19 @@ $sart=_array_item ($_GET,"sart");
 <form action ="maske_insert.php" method="GET" name="Formular2" onsubmit="return chkFormular()">
 
 
-<p>Bitte wählen sie eine Werkart:</p> 
+<p>Bitte wï¿½hlen sie eine Werkart:</p>
 
 <select class="form" name="sart">
-           <option value="m" <?php if($sart=="m")print"selected"; ?>>Monographien </option>
-           <option value="u" <?php if($sart=="u")print"selected"; ?>>Aufs&auml;tze  </option>
+           <option value="m" <?php if($sart=="m")print"selected"; ?>>Monographien</option>
+           <option value="u" <?php if($sart=="u")print"selected"; ?>>AufsÃ¤tze</option>
            <option value="f" <?php if($sart=="f")print"selected"; ?>>Fortlaufende Werke</option>
            <option value="z" <?php if($sart=="z")print"selected"; ?>>Zeitschriften</option>
-           <option value="i" <?php if($sart=="i")print"selected"; ?>>K&ouml;rperschaften  </option>
+           <option value="i" <?php if($sart=="i")print"selected"; ?>>KÃ¶rperschaften</option>
            <option value="p" <?php if($sart=="p")print"selected"; ?>>Personen</option>
-           <option value="s" <?php if($sart=="s")print"selected"; ?>>Systematika </option>
-           <option value="b" <?php if($sart=="b")print"selected"; ?>>bildliche Darstellungen </option>
+           <option value="s" <?php if($sart=="s")print"selected"; ?>>Systematika</option>
+           <option value="b" <?php if($sart=="b")print"selected"; ?>>bildliche Darstellungen</option>
 </select>
-<input type = "submit" value="Übernehmen" >
+<input type = "submit" value="ï¿½bernehmen" >
 </form>
 
 
@@ -57,31 +58,31 @@ $i=2;
 
 while ($var = @mysql_field_name($res,$i))
 {
-$i++;  
+$i++;
 if (($sart == "f")&& (preg_match('/^K6/', $var))) continue;
 
 print  "
-       
+
             <tr >
             <td  align=\"left\" bgcolor=\"#D5D5D5\">$a[$var] ($var) </td>
             <td bgcolor=\"#D5D5D5\">&nbsp;</td>
             <td bgcolor=\"#D5D5D5\">";
-   
-     
-     
+
+
+
      print  "<input type=\"text\" name=\"$var\" value=\"\" size=\"60\" maxlength=\"750\" >";
-           
-       
-if ($var == "K900") print "<a href =\"javascript:open_window('K200',1)\" >[Index]</a>";  
-if ($var == "K087") print "<a href =\"javascript:open_window('$var',1)\" >[Index]</a>";  
-if ($var == "K200") print "<a href =\"javascript:open_window('$var',1)\" >[Index]</a>";  
-if ($var == "K204") print "<a href =\"javascript:open_window('$var',1)\" >[Index]</a>";  
-if ($var == "K240") print "<a href =\"javascript:open_window('$var',0)\" >[Index]</a>";  
-if ($var == "K441") print "<a href =\"javascript:open_window('$var',1)\" >[Index]</a>"; 
-if ($var == "K630") print "<a href =\"javascript:open_window('$var',0)\" >[Index]</a>"; 
-     
-        
-        
+
+
+if ($var == "K900") print "<a href =\"javascript:open_window('K200',1)\" >[Index]</a>";
+if ($var == "K087") print "<a href =\"javascript:open_window('$var',1)\" >[Index]</a>";
+if ($var == "K200") print "<a href =\"javascript:open_window('$var',1)\" >[Index]</a>";
+if ($var == "K204") print "<a href =\"javascript:open_window('$var',1)\" >[Index]</a>";
+if ($var == "K240") print "<a href =\"javascript:open_window('$var',0)\" >[Index]</a>";
+if ($var == "K441") print "<a href =\"javascript:open_window('$var',1)\" >[Index]</a>";
+if ($var == "K630") print "<a href =\"javascript:open_window('$var',0)\" >[Index]</a>";
+
+
+
         if ($var == K441)print"<table>
          <tr><td> Band</td><td><input type=\"text\" name=\"K521a\" value=\"\"  size=\"30\" ></td></tr>
          <tr><td> Jahr</td><td><input type=\"text\" name=\"K521b\" value=\"\"   size=\"30\"></td></tr>
@@ -92,7 +93,7 @@ if ($var == "K630") print "<a href =\"javascript:open_window('$var',0)\" >[Index
 
 
 print"</td></tr>";
-  
+
 
 }
 
@@ -108,9 +109,9 @@ print"<input type = \"hidden\" name =\"sart\" value=\"$sart\">";
 <!--
  function open_window (index,mod )
 {
- 
+
 var winA = window.open("index.php?mod="+mod+"&id="+index+"", 'MyWindow', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizeable=1,width=500,height=500');
-     
+
 }
 
 

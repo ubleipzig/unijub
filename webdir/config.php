@@ -213,7 +213,7 @@ $result2= mysql_query($query);
 if (mysql_numrows($result2)){
 
 
-print"<tr><td valign='top'><strong>Schlagw&ouml;rter:</strong></td><td>";
+print"<tr><td valign='top'><strong>Schlagwörter:</strong></td><td>";
 
 
 while($row2=mysql_fetch_array($result2)){
@@ -238,7 +238,7 @@ function koerperschaft ($str,$kid,$url)
 
 if(!empty($str)) {
 
-print"<tr><td valign='top'><strong>K&ouml;rperschaft:</strong></td><td>";
+print"<tr><td valign='top'><strong>Körperschaft:</strong></td><td>";
 if (!empty($kid))
 {
 
@@ -256,15 +256,15 @@ if(!empty($row[name]))print"<tr><td valign='top'>Name:</td><td><a href=\"ausgabe
 
 if(!empty($row[aname]))print "<tr><td valign='top'>Andere Namensform:</td><td>".htmlspecialchars($row[aname])."</td></tr>";
 
-if(!empty($row[fname]))print "<tr><td valign='top'>fr&uuml;herer Name:</td><td>".htmlspecialchars($row[fname])."</td></tr>";
+if(!empty($row[fname]))print "<tr><td valign='top'>früherer Name:</td><td>".htmlspecialchars($row[fname])."</td></tr>";
 
-if(!empty($row[sname]))print "<tr><td valign='top'>sp&auml;terer Name:</td><td>".htmlspecialchars($row[sname])."</td></tr>";
+if(!empty($row[sname]))print "<tr><td valign='top'>späterer Name:</td><td>".htmlspecialchars($row[sname])."</td></tr>";
 
 
 
-if(!empty($row[gjahr]))print "<tr><td valign='top'>Gr&uuml;ndung:</td><td>".htmlspecialchars($row[gjahr])."</td></tr>";
+if(!empty($row[gjahr]))print "<tr><td valign='top'>Gründung:</td><td>".htmlspecialchars($row[gjahr])."</td></tr>";
 
-if(!empty($row[djahr]))print "<tr><td valign='top'>Aufl&ouml;sung:</td><td>".htmlspecialchars($row[djahr])."</td></tr>";
+if(!empty($row[djahr]))print "<tr><td valign='top'>Auflösung:</td><td>".htmlspecialchars($row[djahr])."</td></tr>";
 
 
 
@@ -302,15 +302,15 @@ if(!empty($row[name]))print"<tr><td valign='top'>Name:</td><td><a href=\"ausgabe
 
 if(!empty($row[aname]))print "<tr><td valign='top'>Andere Namensform:</td><td>".htmlspecialchars($row[aname])."</td></tr>";
 
-if(!empty($row[fname]))print "<tr><td valign='top'>fr&uuml;herer Name:</td><td>".htmlspecialchars($row[fname])."</td></tr>";
+if(!empty($row[fname]))print "<tr><td valign='top'>früherer Name:</td><td>".htmlspecialchars($row[fname])."</td></tr>";
 
-if(!empty($row[sname]))print "<tr><td valign='top'>sp&auml;terer Name:</td><td>".htmlspecialchars($row[sname])."</td></tr>";
+if(!empty($row[sname]))print "<tr><td valign='top'>späterer Name:</td><td>".htmlspecialchars($row[sname])."</td></tr>";
 
 
 
-if(!empty($row[gjahr]))print "<tr><td valign='top'>Gr&uuml;ndung:</td><td>".htmlspecialchars($row[gjahr])."</td></tr>";
+if(!empty($row[gjahr]))print "<tr><td valign='top'>Gründung:</td><td>".htmlspecialchars($row[gjahr])."</td></tr>";
 
-if(!empty($row[djahr]))print "<tr><td valign='top'>Aufl&ouml;sung:</td><td>".htmlspecialchars($row[djahr])."</td></tr>";
+if(!empty($row[djahr]))print "<tr><td valign='top'>Auflösung:</td><td>".htmlspecialchars($row[djahr])."</td></tr>";
 
 
 

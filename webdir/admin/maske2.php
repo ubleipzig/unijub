@@ -20,13 +20,13 @@ for ($i=0;$i<3;$i++)
 
 <tr>    <td class="form" nowrap>
     	     <select class="form" name="<?php print"suchindex".$i ?>">
-           <option value="1" <?php if($suchindex[$i]==1)print"selected"; ?>>All  </option>
-           <option value="2" <?php if($suchindex[$i]==2)print"selected"; ?>>Titel  </option>
-           <option value="3" <?php if($suchindex[$i]==3)print"selected"; ?>>Schlagw&ouml;rter </option>
-           <option value="4" <?php if($suchindex[$i]==4)print"selected"; ?>>Person, Autor </option>
-           <option value="5" <?php if($suchindex[$i]==5)print"selected"; ?>>K&ouml;rperschaft  </option>
+           <option value="1" <?php if($suchindex[$i]==1)print"selected"; ?>>All</option>
+           <option value="2" <?php if($suchindex[$i]==2)print"selected"; ?>>Titel</option>
+           <option value="3" <?php if($suchindex[$i]==3)print"selected"; ?>>SchlagwÃ¶rter</option>
+           <option value="4" <?php if($suchindex[$i]==4)print"selected"; ?>>Person, Autor</option>
+           <option value="5" <?php if($suchindex[$i]==5)print"selected"; ?>>KÃ¶rperschaft</option>
            <option value="6" <?php if($suchindex[$i]==6)print"selected"; ?>>Ort</option>
-           <option value="7" <?php if($suchindex[$i]==7)print"selected"; ?>>Verlag </option>
+           <option value="7" <?php if($suchindex[$i]==7)print"selected"; ?>>Verlag</option>
            </select>
 </td>
 
@@ -64,8 +64,8 @@ for ($i=0;$i<3;$i++)
 
 
 <?php	 } ?>
-	
-	
+
+
 
 
 	<tr>
@@ -91,7 +91,7 @@ for ($i=0;$i<3;$i++)
 
 
 
-<tr><td colspan = 4><input type = "submit" value="Suchen" > 
+<tr><td colspan = 4><input type = "submit" value="Suchen" >
 <input type="reset" value=" Abbrechen">
 
 Ordnen nach:<select class="form" name="sort">
@@ -102,7 +102,7 @@ Ordnen nach:<select class="form" name="sort">
 
 <tr><td colspan = 4>
 <input type="checkbox" name="filter0" value="1" <?php if($filter[0]==1)print"CHECKED "; ?> onclick ="return check_filter(0)">Monographie
-<input type="checkbox" name="filter1" value="1" <?php if($filter[1]==1)print"CHECKED "; ?> onclick ="return check_filter(1)">Aufsätze
+<input type="checkbox" name="filter1" value="1" <?php if($filter[1]==1)print"CHECKED "; ?> onclick ="return check_filter(1)">Aufsï¿½tze
 <input type="checkbox" name="filter2" value="1" <?php if($filter[2]==1)print"CHECKED "; ?> onclick ="return check_filter(2)">Periodica
 <input type="checkbox" name="filter4" value="1" <?php if($filter[4]==1)print"CHECKED "; ?> onclick ="return check_filter(4)">bildliche Darstellungen
 
@@ -139,7 +139,7 @@ var chk = 0,chkZ=1;
 
   if (chk == 0)
    {
-    alert("Es muss mindestens eine Feld ausgefüllt sein!");
+    alert("Es muss mindestens eine Feld ausgefï¿½llt sein!");
     document.Formular.suchwort0.focus();
     return false;
    }
@@ -147,7 +147,7 @@ var chk = 0,chkZ=1;
 
  if(chkZ == 0)
     {
-    alert("Jahreszahl keine gültige Zahl!");
+    alert("Jahreszahl keine gï¿½ltige Zahl!");
     document.Formular.suchwort3.focus();
     return false;
     }

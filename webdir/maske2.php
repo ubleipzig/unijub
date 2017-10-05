@@ -20,13 +20,13 @@ for ($i=0;$i<3;$i++)
 
 <tr>    <td class="form" nowrap>
     	     <select class="form" name="<?php print"suchindex".$i ?>">
-           <option value="1" <?php if($suchindex[$i]==1)print"selected"; ?>>All  </option>
-           <option value="2" <?php if($suchindex[$i]==2)print"selected"; ?>>Titel  </option>
-           <option value="3" <?php if($suchindex[$i]==3)print"selected"; ?>>Schlagw&ouml;rter </option>
-           <option value="4" <?php if($suchindex[$i]==4)print"selected"; ?>>Person, Autor </option>
-           <option value="5" <?php if($suchindex[$i]==5)print"selected"; ?>>K&ouml;rperschaft  </option>
+           <option value="1" <?php if($suchindex[$i]==1)print"selected"; ?>>All</option>
+           <option value="2" <?php if($suchindex[$i]==2)print"selected"; ?>>Titel</option>
+           <option value="3" <?php if($suchindex[$i]==3)print"selected"; ?>>Schlagwörter</option>
+           <option value="4" <?php if($suchindex[$i]==4)print"selected"; ?>>Person, Autor</option>
+           <option value="5" <?php if($suchindex[$i]==5)print"selected"; ?>>Körperschaft</option>
            <option value="6" <?php if($suchindex[$i]==6)print"selected"; ?>>Ort</option>
-           <option value="7" <?php if($suchindex[$i]==7)print"selected"; ?>>Verlag </option>
+           <option value="7" <?php if($suchindex[$i]==7)print"selected"; ?>>Verlag</option>
            </select>
 </td>
 

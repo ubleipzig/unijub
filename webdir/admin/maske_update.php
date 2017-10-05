@@ -1,7 +1,8 @@
 <HTML>
 <HEAD>
 <link rel="stylesheet" type="text/css" href="stylesheets.css">
-<TITLE>Leipzig - Bibliographie</TITLE> 
+<TITLE>Leipzig - Bibliographie</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </HEAD>
 
 <body>
@@ -10,14 +11,14 @@
 
 
 
-<?php 
+<?php
 include "config.php";
 include "array_inc.php";
 $sart=_array_item ($_GET,"sart");
 $id=_array_item ($_GET,"id");
-$delete_id=_array_item ($_GET,"delete_id"); 	
-$delete_mod=_array_item ($_GET,"delete_mod"); 	
-$delete_table=_array_item ($_GET,"delete_table"); 
+$delete_id=_array_item ($_GET,"delete_id");
+$delete_mod=_array_item ($_GET,"delete_mod");
+$delete_table=_array_item ($_GET,"delete_table");
 
 ?>
 
@@ -54,43 +55,43 @@ $result= mysql_query($query);
 
 $query="DELETE FROM k200_p where id= '$id' ";
 $result= mysql_query($query);
-	
+
 $query="DELETE FROM k204_p where id= '$id' ";
 $result= mysql_query($query);
 
 
 
 $query="DELETE FROM k441_z where id = '$id' ";
-$result= mysql_query($query);	
+$result= mysql_query($query);
 
-die ("<p align =\"center\">Daten wurden erfolgreich gelöscht <a href =\"javascript:_close ()\">[Fenster schließen]</a></p>");
+die ("<p align =\"center\">Daten wurden erfolgreich gelï¿½scht <a href =\"javascript:_close ()\">[Fenster schlieï¿½en]</a></p>");
 
 }
 else if ($delete_mod == 1)//spalte
 {
 
-	
+
 switch ($delete_table)
 {
-case "K087":	
+case "K087":
 $query="DELETE FROM k087_p where K0i1 = '$delete_id' ";
 $result= mysql_query($query);
-break;	
-case "K200":	
+break;
+case "K200":
 $query="DELETE FROM k200_p where K0i1= '$delete_id' ";
 $result= mysql_query($query);
 break;
-case "K204":		
+case "K204":
 $query="DELETE FROM k204_p where K0i1 = '$delete_id' ";
 $result= mysql_query($query);
 break;
-case "K441":	
+case "K441":
 $query="DELETE FROM k441_z where K0i1 = '$delete_id' ";
-$result= mysql_query($query);	
+$result= mysql_query($query);
 break;
 
 
-}	
+}
 
 
 }
@@ -104,11 +105,11 @@ $str2_rows=substr ($str2_rows,0,strlen($str2_rows)-1);
 
 
 
-if (($sart == "z")||($sart == "f")) 
+if (($sart == "z")||($sart == "f"))
 $query_join[0]=     "LEFT JOIN  institution I ON H.K240= I .K0i1
                      LEFT JOIN  institution I2 ON H.K630= I2 .K0i1";
 
-if (($sart == "m")||($sart == "u")||($sart == "z")||($sart == "f")) 
+if (($sart == "m")||($sart == "u")||($sart == "z")||($sart == "f"))
 $query_join[1]=     "LEFT JOIN  institution I ON H.k240 = I .K0i1";
 
 
@@ -117,8 +118,8 @@ $query_join[2] =     "LEFT JOIN  periodica F ON  H.K441 = F.K0i1";
 
 
 
-if($sart == "u") 
-$query_join[3]=     " LEFT JOIN  k421_dz dz ON dz.id  = H.K0i1"; 
+if($sart == "u")
+$query_join[3]=     " LEFT JOIN  k421_dz dz ON dz.id  = H.K0i1";
 
 
 $query = "SELECT $str_rows FROM $table  H
@@ -136,7 +137,7 @@ $i=0;
 while ($var = @mysql_field_name($res,$i))
 {
 
-$i++;  
+$i++;
 if (($sart == "f")&& (preg_match('/^K6/', $var))) continue;
 
 if (($var == "K087")|| ($var == "K200")|| ($var == "K204")||($var == "K441"))
@@ -161,30 +162,30 @@ while ($row2=mysql_fetch_array($result))
 {
 
 if (!empty($row2[name]))
-{ 
+{
 
 $ii++;
 $var2=$var."$ii";
 $row2[id]=str_replace ("\"","&quot;",$row2[id]);
 
 print  "
-       
+
             <tr>
             <td  align=\"left\" bgcolor=\"#D5D5D5\">$a[$var] Update:</td>
             <td bgcolor=\"#D5D5D5\">&nbsp;</td>
             <td bgcolor=\"#D5D5D5\">
-            
+
             <table border = 1>
              <tr >
                <td rowspan = 2><textarea name=\"$var2\" cols=\"50\" rows=\"3\">$row2[id]</textarea></td>
-             
+
                <td><a href =\"javascript:open_window('$var2',0)\" >[Index]</a></td>
              </tr>
              <tr>
               <td><a href =\"javascript:ensure('$row2[H_k_id]','$id','$sart',1,'$var')\">[Delete]</a></td>
              </tr>
-            
-          
+
+
            ";
 
 
@@ -249,7 +250,7 @@ print  "<tr>
             <a href =\"javascript:open_window('$var',$mod)\" >[Index]</a>
            </td></tr>
         ";
-        
+
  if ($var == K441)print"<tr><td colspan = 2><table>
          <tr><td> Band</td><td><input type=\"text\" name=\"K521a\" value=\"\"  size=\"30\" ></td></tr>
          <tr><td> Jahr</td><td><input type=\"text\" name=\"K521b\" value=\"\"   size=\"30\"></td></tr>
@@ -257,15 +258,15 @@ print  "<tr>
          <tr><td> Seitenangabe</td><td><input type=\"text\" name=\"K521d\" value=\"\"  size=\"30\" > </td></tr>
         <tr><td>  Erscheinungsort</td><td><input type=\"text\" name=\"zeort\" value=\"\"  size=\"30\" ></td></tr>
          </table></td></tr>";
-        
-       
-   
+
+
+
 if(!empty($row2[name]))print" <tr><td colspan = 2 ><a href =\"maske_update.php?id=$row2[id]&sart=$row2[sart]\"  target = \"_blank\">[".htmlspecialchars($row2[name])."]</a></td></tr>";
 print"</table></td></tr>";
 
-$query2="";            
-}   
-       
+$query2="";
+}
+
 
 
 
@@ -274,35 +275,35 @@ else
 {
 if (($var == "K0i1")||($var == "K003"))
 {
-print"<input type=\"hidden\" name =\"$var\" value=\"$row[$var]\">";	
+print"<input type=\"hidden\" name =\"$var\" value=\"$row[$var]\">";
  print"    <tr>
             <td  align=\"left\" bgcolor=\"#D5D5D5\">$a[$var] ($var)</td>
             <td bgcolor=\"#D5D5D5\">&nbsp;</td>
             <td bgcolor=\"#D5D5D5\">
-            
+
              $row[$var]
              </td></tr>";
-          
+
 }
 else
 {
 
 $row[$var]=str_replace ("\"","&quot;",$row[$var]);
 print  "
-       
+
             <tr>
             <td  align=\"left\" bgcolor=\"#D5D5D5\">$a[$var] ($var)</td>
             <td bgcolor=\"#D5D5D5\">&nbsp;</td>
             <td bgcolor=\"#D5D5D5\">
-            
+
              <textarea name=\"$var\" cols=\"50\" rows=\"3\">$row[$var]</textarea>
              </td></tr>";
-}            
+}
 }
 
 
 
-  
+
 
 $query2="";
 }
@@ -313,13 +314,13 @@ print"<input type = \"hidden\" name =\"sart\" value=\"$sart\">";
 mysql_close($connect);
 ?>
 <tr><td colspan = "2" ><input type = "submit" value="Speichern" ></td>
-<?php 
+<?php
 
 print"<td><a href =\"javascript:ensure('','$id','$sart',2,'')\">[Delete data]</a>";
 
 
 ?>
-<a  href ="javascript:_close ()">[Fenster schließen]</a></td>
+<a  href ="javascript:_close ()">[Fenster schlieï¿½en]</a></td>
 </form>
 </tr></table>
 
@@ -339,9 +340,9 @@ opener.focus ();
 
  function open_window (index,mod )
 {
-    
+
      var winA = window.open("index.php?mod="+mod+"&id="+index+"", 'MyWindow', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizeable=1,width=500,height=500');
-     
+
 }
 
 
