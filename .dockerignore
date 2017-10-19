@@ -1,3 +1,6 @@
-unijub.tar.gz
+.dockerignore
+.gitlab-ci.yml
 docker-compose.yml
+Dockerfile
 Readme.md
+unijub.tar.gz
